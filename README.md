@@ -2,20 +2,20 @@
 
 ## useful commands:
 
-su - # become root user
+`su -` # become root user
 
-usermod -aG sudo your_username # give sudo permissions to user
+`usermod -aG sudo <your_username>` # give sudo permissions to user
 
-dpkg-reconfigure console-setup # configures screen resolution
+`dpkg-reconfigure console-setup` # configures screen resolution
 
-apt install sudo # installs sudo
+`apt install sudo` # installs sudo
 
-top # real time process monitor 
+`top` # real time process monitor 
  Key shortcuts while inside top:
-  - q — quit
-  - k — kill a process (enter PID)
-  - M — sort by memory usage
-  - P — sort by CPU usage
+  - `q` — quit
+  - `k` — kill a process (enter PID)
+  - `M` — sort by memory usage
+  - `P` — sort by CPU usage
 
 cat /etc/**release** # get major/minor version of system
 
