@@ -4,3 +4,27 @@
 - Configure and manage networking services and protocols (TCP/IP, DHCP, DNS) across multiple Linux distributions using both GUI and command-line tools.
 - Master essential Linux networking commands and utilities: ip, ping, traceroute, dig, nmcli, SSH, SFTP, SCP, rsync.
 - Build, test, and secure Linux network environments with hands-on labs, including static and dynamic IP configuration, and hostname management. 
+
+
+## useful commands:
+
+`su -` # become root user
+
+`usermod -aG sudo <your_username>` # give sudo permissions to user
+
+`dpkg-reconfigure console-setup` # configures screen resolution
+
+`apt install sudo` # installs sudo
+
+`top` # real time process monitor 
+ Key shortcuts while inside top:
+  - `q` — quit
+  - `k` — kill a process (enter PID)
+  - `M` — sort by memory usage
+  - `P` — sort by CPU usage
+
+`cat /etc/**release**` # get major/minor version of system
+
+`id <user>` # get info and permissions info on a user
+
+
