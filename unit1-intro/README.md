@@ -18,6 +18,7 @@
 – you can install ssh if it isnt already installed using `apt install openssh-server`.
 - virtual box adds complexity to ssh connections from the host to vm, so we need to use port forwarding
 
+### ifconfig and ip
 `ifconfig` stands for interface configuration. It displays information about your
   network interfaces, including:
 
@@ -26,17 +27,7 @@
   - MAC address — (ether)
   - Status — whether the interface is up or down
 
-  It's the macOS/older Unix equivalent of `ip a` on Linux.
-
-
-Ater getting the ip address of the vm, set up port forwarding on virtualbox.
-
-host ip should be 127.0.0.1
-host port could be anything
-guest ip is the ip address of the vm
-guest port is 22 which is the default for ssh on any machine
-
-ssh into it using: `ssh sysadmin@<ip> where in a port forwarding case is the localhost ip. You should add the port option in this case as wel: `-p <host port specified>`
+It's the macOS/older Unix equivalent of `ip a` on Linux.
 
 ip a / ifconfig show all network interfaces on your machine, which can include:
 
@@ -56,6 +47,37 @@ ip a / ifconfig show all network interfaces on your machine, which can include:
   you often see a private IP on the interface even though the machine has a public IP — the public IP is handled by the cloud's
    NAT layer and won't appear in ip a at all.
 
-  To find your public IP, you'd need to query an external service (e.g., curl ifconfig.me).
+  To find your *public* IP, you'd need to query an external service (e.g., curl ifconfig.me).
   - to retrieve ipv4 address specifically: `ifconfig.me -4`
   - to retrieve ipv6 specifically: `ifconfig.me -6`
+
+### port forwarding
+
+When data arrives at a machine on a specific port, instead of that machine handling it, it first gets forwarded to a different machine (or port).
+
+#### Use cases:
+
+##### Home Router
+
+Your router has one public IP. Behind it are many devices with private IPs. From the internet, there's no way to reach a private ip directly.
+
+Port forwarding solves this:
+- Someone connects to your public IP on port 8080
+- Your router sees it and forwards it to the private ip on port 80
+- The server on that machine responds, router sends the reply back
+
+##### Other common uses:
+- Hosting a game server at home
+- SSH-ing into a home machine from outside
+- Exposing a local web server to the internet
+
+#### SSH with VirtualBox
+Ater getting the ip address of the vm, set up port forwarding on virtualbox.
+
+- host ip should be 127.0.0.1
+- host port could be anything
+- guest ip is the ip address of the vm
+- guest port is 22 which is the default for ssh on any machine
+
+ssh into it using: `ssh sysadmin@<ip> where in a port forwarding case is the localhost ip. You should add the port option in this case as wel: `-p <host port specified>`
+
