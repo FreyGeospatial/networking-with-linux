@@ -81,3 +81,16 @@ Ater getting the ip address of the vm, set up port forwarding on virtualbox.
 
 ssh into it using: `ssh sysadmin@<ip> where in a port forwarding case is the localhost ip. You should add the port option in this case as wel: `-p <host port specified>`
 
+#### VIM
+
+vim is usually installed but if not, `sudo apt install vim`.
+
+to create and open a file using vim, `test1-vim.txt'`
+
+Vim has diffrent 'modes'. for example, there's command mode and insert mode. to add text, you should be in insert mode. To go into insert mode from command mode, press `i`
+
+press `esc` to get out of insert mode
+
+use `:wq` to write save the file to the disk and quit
+use `:w` to write the file to the disk
+use `:q` to quit
