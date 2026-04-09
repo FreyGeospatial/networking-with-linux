@@ -94,3 +94,17 @@ press `esc` to get out of insert mode
 use `:wq` to write save the file to the disk and quit
 use `:w` to write the file to the disk
 use `:q` to quit
+
+#### TCP/IP and IP addresses
+
+static ip addresses are manually assigned, while dynamic ip addresses are assigned automatically
+- routers or switches and firewalls and printers typically have static ips. servers are often static but not always. usually its the hosts or devices that do not change often.
+- devices that change often should get their ip addresses from dhcp server. that may be a standalone server or could be part of the router. dynamic assignment is quicker and less error prone.
+
+everything in an ip address except the last placeholder is the network. the last section is the device on the network. /## at end of ip address is the net mask.
+
+`inet` from `ip a` command means "internet address" or "ip address"
+
+![alt text](<Screenshot 2026-04-05 at 3.18.18 PM.png>)
+
+`state UP` means the network is up and running 
