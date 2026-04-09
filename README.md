@@ -29,5 +29,6 @@
 
 `ip a` fetches networking interfaces
 
-`ip -br -c a` condenses network interface info to just the network interface type (`lo`, `enp3s0`, etc) status (e.g., `UP`), and the ipv4 and ipv5 addresses
-
+`ip -br -c a` condenses network interface info to just the network interface type (`lo`, `enp3s0`,`wlp2s0` etc) status (e.g., `UP`), and the ipv4 and ipv5 addresses
+    - br is for 'brief
+    - c is for 'color'
