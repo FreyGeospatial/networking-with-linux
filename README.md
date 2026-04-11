@@ -34,4 +34,5 @@
     - c is for 'color'
 
 On MAC: 
-- ipconfig getifaddr <interface name>
+- to get list of interfaces: `ifconfig`
+- to get interface private ip: `ipconfig getifaddr <interface name>`
