@@ -34,6 +34,9 @@
     - c is for 'color'
 
 `systemctl status <service>`. e.g., `<service>` could be `NetworkManager` if running a client system with a desktop environment, `Networking` if using debian server, ir `Networkd` if using ubuntu server
+
+can also use `nmcli` on client systems to fetch tcp/ip info, including ip addresses. some of this info overlaps with `ip a`
+
 On MAC: 
 - to get list of interfaces: `ifconfig`
 - to get interface private ip: `ipconfig getifaddr <interface name>`
