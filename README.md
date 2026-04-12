@@ -33,6 +33,7 @@
     - br is for 'brief
     - c is for 'color'
 
+`systemctl status <service>`. e.g., `<service>` could be `NetworkManager` if running a client system with a desktop environment, `Networking` if using debian server, ir `Networkd` if using ubuntu server
 On MAC: 
 - to get list of interfaces: `ifconfig`
 - to get interface private ip: `ipconfig getifaddr <interface name>`
